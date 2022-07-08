@@ -17,6 +17,6 @@ Route::get('/',[\App\Http\Controllers\ProjectController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('admin.home.home');
-})->middleware(['auth']);
+})->middleware(['auth'])->name('home');
 
 require __DIR__.'/auth.php';
